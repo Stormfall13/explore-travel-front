@@ -1,0 +1,51 @@
+.admin__container .users-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+.admin__container .user-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 330px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.admin__container .user-card p {
+  margin: 0;
+}
+.admin__container .user-card input,
+.admin__container .user-card select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+.admin__container .user-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.admin__container .user-card-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.admin__container .user-card-actions button:first-child {
+  background: var(--main-color);
+  color: white;
+}
+.admin__container .user-card-actions button:last-child {
+  background-color: #f44336;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .admin__container {
+    padding-top: inherit !important;
+  }
+}/*# sourceMappingURL=adminpage.css.map */
