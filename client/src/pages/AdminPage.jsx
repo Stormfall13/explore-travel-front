@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import "./adminpage.css";
 import Header from "../components/Header";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const AdminPage = () => {
     const [users, setUsers] = useState([]);
     const [editUser, setEditUser] = useState(null);
@@ -32,7 +34,7 @@ const AdminPage = () => {
 
         const fetchUsers = async () => {
             try {
-                const res = await fetch("http://localhost:5000/api/admin/users", {
+                const res = await fetch(`${API_URL}/api/admin/users`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const Register = () => {
     const [form, setForm] = useState({ username: "", email: "", password: "" });
     const navigate = useNavigate();
@@ -13,7 +15,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/api/auth/register", form);
+            await axios.post(`${API_URL}/api/auth/register`, form);
             navigate("/login");
         } catch (error) {
             console.error("Ошибка регистрации:", error.response?.data?.message);
