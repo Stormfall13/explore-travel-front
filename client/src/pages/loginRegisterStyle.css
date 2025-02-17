@@ -3,8 +3,12 @@
   flex-direction: column;
   align-items: center;
 }
-
-form input {
+.auth__container form {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+.auth__container form input {
   font-family: var(--font-inter);
   font-size: 15px;
   font-weight: var(--regular);
@@ -13,17 +17,17 @@ form input {
   outline: none;
   padding: 18px 5px 18px 9px;
 }
-form input::-moz-placeholder {
+.auth__container form input::-moz-placeholder {
   font-family: var(--font-inter);
   font-size: 15px;
   font-weight: var(--regular);
 }
-form input::placeholder {
+.auth__container form input::placeholder {
   font-family: var(--font-inter);
   font-size: 15px;
   font-weight: var(--regular);
 }
-form button {
+.auth__container form button {
   background: var(--main-color);
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 8px;

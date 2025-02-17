@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { loginSuccess } from "../store/slices/authSlice";
 
-const API_URL = process.env.REACT_APP_API_URL;
+import './loginRegisterStyle.css';
 
 const Login = () => {
     const [form, setForm] = useState({ email: "", password: "" });
@@ -19,7 +19,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`${API_URL}/api/auth/login`, form);
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, form);
             // console.log("Ответ сервера:", res.data); // 🔍 Лог для проверки
             dispatch(loginSuccess(res.data));
             navigate("/");
@@ -35,7 +35,7 @@ const Login = () => {
     
 
     return (
-        <div className="auth-container">
+        <div className="auth__container">
             <h2>Вход</h2>
             <form onSubmit={handleSubmit}>
                 <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />

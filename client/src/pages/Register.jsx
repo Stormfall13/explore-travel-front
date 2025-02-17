@@ -4,8 +4,6 @@ import axios from "axios";
 
 import './loginRegisterStyle.css';
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 const Register = () => {
     const [form, setForm] = useState({ username: "", email: "", password: "" });
     const navigate = useNavigate();
@@ -17,7 +15,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${API_URL}/api/auth/register`, form);
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, form);
             navigate("/login");
         } catch (error) {
             console.error("Ошибка регистрации:", error.response?.data?.message);
