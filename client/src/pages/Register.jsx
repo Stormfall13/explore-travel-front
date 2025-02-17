@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import './loginRegisterStyle.css';
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Register = () => {
@@ -23,7 +25,7 @@ const Register = () => {
     };
 
     return (
-        <div className="auth-container">
+        <div className="auth__container">
             <h2>Регистрация</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="username" placeholder="Имя" value={form.username} onChange={handleChange} required />
