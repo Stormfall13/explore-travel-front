@@ -7,7 +7,8 @@ const ScrollEffect = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(window.matchMedia("(min-width: 992px)").matches);
 
     useEffect(() => {
-        if (location.pathname !== "/") return; // 🚀 Отключаем анимацию на других страницах
+        // if (location.pathname !== "/") return; // 🚀 Отключаем анимацию на других страницах
+        if (!["/", "/destinations", "/about", "/partners"].includes(location.pathname)) return;
 
         const mediaQuery = window.matchMedia("(min-width: 992px)");
 
@@ -40,7 +41,7 @@ const ScrollEffect = () => {
             window.addEventListener("wheel", handleScroll);
 
             const contents = document.querySelectorAll(
-            ".explore__wrapp-main, .way__wrapp-main, .featured__wrapp-main, .guides__wrapp-main, .testimonials__wrapp-main, .trending__wrapp-main, .footer__wrapp-main"
+              ".explore__wrapp-main, .way__wrapp-main, .featured__wrapp-main, .guides__wrapp-main, .testimonials__wrapp-main, .trending__wrapp-main, .footer__wrapp-main, .container"
             );
 
             const observer = new IntersectionObserver(
@@ -52,7 +53,7 @@ const ScrollEffect = () => {
                 }
                 });
             },
-            { threshold: 0.3 }
+            { threshold: 0.1 }
             );
 
             contents.forEach((content) => observer.observe(content));

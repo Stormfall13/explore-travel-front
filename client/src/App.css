@@ -801,7 +801,8 @@ p {
   .testimonials__wrapp-main,
   .trending__wrapp-main,
   .footer__wrapp-main,
-  .explore__wrapp-main {
+  .explore__wrapp-main,
+  .container {
     transform: translateY(100px);
     opacity: 0;
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
@@ -812,7 +813,8 @@ p {
   .testimonials__wrapp-main.visible,
   .trending__wrapp-main.visible,
   .footer__wrapp-main.visible,
-  .explore__wrapp-main.visible {
+  .explore__wrapp-main.visible,
+  .container.visible {
     transform: translateY(0);
     opacity: 1;
   }

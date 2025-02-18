@@ -8,6 +8,8 @@ import nepal from '../assets/nepal.png';
 import tokio from '../assets/tokio.png';
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ScrollEffect from "../components/ScrollEffect";
 
 const destinationsData = [
   {
@@ -94,7 +96,7 @@ const Destinations = () => {
   return (
     <>
     <Header />
-    <div className="destinations">
+    <section className="destinations">
       <div className="container">
         <h1 className="title">Популярные направления</h1>
         <p className="description">
@@ -134,7 +136,8 @@ const Destinations = () => {
           </button>
         )}
       </div>
-    </div>
+    </section>
+    <Footer />
     </>
   );
 };

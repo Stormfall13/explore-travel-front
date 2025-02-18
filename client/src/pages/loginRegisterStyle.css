@@ -3,8 +3,24 @@
   flex-direction: column;
   align-items: center;
 }
+.auth__container h2 {
+  font-family: var(--font-inter);
+  font-size: 30px;
+  font-weight: var(--regular);
+}
+.auth__container p {
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: var(--regular);
+}
+.auth__container p a {
+  text-decoration: underline;
+  color: var(--main-color);
+}
 .auth__container form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 15px;
   padding: 15px;
 }
@@ -37,5 +53,7 @@
   font-size: 17px;
   font-weight: var(--bold);
   outline: none;
-  padding: 15px 60px;
+  padding: 15px 0;
+  max-width: 222px;
+  width: 100%;
 }/*# sourceMappingURL=loginRegisterStyle.css.map */

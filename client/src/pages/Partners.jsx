@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import './partners.css';
 import Header from "../components/Header";
 import Footer from '../components/Footer';
+import ScrollEffect from "../components/ScrollEffect";
 
 const partners = [
   {
@@ -53,7 +54,8 @@ const Partners = () => {
   return (
     <> 
       <Header />
-      <div className="partners">
+      <ScrollEffect />
+      <section className="partners">
         <div className="container">
           {/* Заголовок и описание */}
           <h1 className="title">Наши партнёры</h1>
@@ -102,7 +104,7 @@ const Partners = () => {
             <p>📍 Адрес: ул. Бизнеса, 15, Москва</p>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   );

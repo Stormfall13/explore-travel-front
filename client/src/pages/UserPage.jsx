@@ -32,11 +32,11 @@ const UserPage = () => {
     return (
         <>
             <Header />
-            <div className='user__page'>
+            <section className='user__page'>
                 <div className="user__page-wrapp">
                     <h1>страница пользователя</h1>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

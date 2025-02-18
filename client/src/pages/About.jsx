@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import './about.css';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const teamMembers = [
   {
@@ -52,7 +53,7 @@ const About = () => {
   return (
     <>
       <Header />
-      <div className="about">
+      <section className="about">
         <div className="container">
           {/* Заголовок и описание */}
           <h1 className="title">О нас</h1>
@@ -110,7 +111,8 @@ const About = () => {
             <p>📍 Адрес: ул. Путешественников, 10, Москва</p>
           </div>
         </div>
-      </div>
+      </section>
+      <Footer />
     </>
   );
 };
