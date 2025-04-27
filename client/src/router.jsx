@@ -47,16 +47,16 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/" element={ <Home /> } />
+                <Route path="/destinations" element={ <Destinations />  } />
+                <Route path="/about" element={ <About /> } />
+                <Route path="/partners" element={ <Partners /> } />
 
                 {/* 🔐 Защищенные маршруты (только для user и admin) */}
-                <Route path="/" element={ <ProtectedRoute allowedRoles={["user", "admin"]}> <Home /> </ProtectedRoute> } />
                 <Route path="/user" element={ <ProtectedRoute allowedRoles={["user", "admin"]}> <UserPage /> </ProtectedRoute> } />
                 <Route path="/admin" element={ <ProtectedRoute allowedRoles={["admin"]}> <AdminPage /> </ProtectedRoute> } />
 
                 {/* 🔐 Destinations, About и Partners тоже доступны только для user и admin */}
-                <Route path="/destinations" element={ <ProtectedRoute allowedRoles={["user", "admin"]}> <Destinations /> </ProtectedRoute> } />
-                <Route path="/about" element={ <ProtectedRoute allowedRoles={["user", "admin"]}> <About /> </ProtectedRoute> } />
-                <Route path="/partners" element={ <ProtectedRoute allowedRoles={["user", "admin"]}> <Partners /> </ProtectedRoute> } />
 
                 {/* Если страница не найдена — редирект на `/` */}
                 <Route path="*" element={<Navigate to="/" />} />
